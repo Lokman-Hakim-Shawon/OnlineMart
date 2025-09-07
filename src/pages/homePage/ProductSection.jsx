@@ -23,19 +23,20 @@ const ProductSection = () => {
           <div className='grid grid-cols-2 lg:grid-cols-4 gap-4'>
             {
                 datas.map((data,index)=><div key={index} className="card bg-base-100 h-80 lg:h-96 w-full shadow-xl">
+                <Link to={`/product_detail/${data.id}`}>
                 <figure className='h-full '>
                   <img
                     src={data.img}
                     alt="Shoes" className='object-cover h-44 lg:h-64   w-full border-2'/>
-                </figure>
+                </figure></Link>
                 <div className="card-body w-full px-1 pt-0 h-36 lg:h-32">
-                  <h2 className="card-title text-lg ">{data.product_name}</h2>
-                  <p className='text-xm'>{data.title}</p>
+                  <Link to={`/product_detail/${data.id}`}><h2 className="card-title text-lg ">{data.product_name}</h2></Link>
+                  <Link to={`/product_detail/${data.id}`}><p className='text-xm'>{data.title}</p></Link>
                   <div className="card-actions my-0 flex justify-around items-center">
                     <Link to={`/payment/${data.id}`}>
-                    <button  className="btn bg-primaryColor text-white w-full mt-0">Order Now</button>
+                    <button onClick={()=>calculate(data)}  className="btn bg-primaryColor text-white w-full mt-0">Order Now</button>
                     </Link>
-                    <FaCartShopping onClick={calculate} className='text-3xl lg:text-4xl text-primaryColor cursor-pointer'/>
+                    <FaCartShopping onClick={()=>calculate(data)} className='text-3xl lg:text-4xl text-primaryColor cursor-pointer'/>
                   </div>
                 </div>
               </div>)

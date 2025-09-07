@@ -8,17 +8,21 @@ import { useState } from 'react'
 
 function App() {
   const [number,setNumber] = useState(0)
-  const calculate=()=>{
+  const [array,setArray]=useState([])
+  const calculate=(data)=>{
      setNumber(number=>number+1)
+     if(data){
+      setArray(prevArray=>[...prevArray,data])
+     }
     }
-    console.log(number)
+    console.log(array)
   return (
     <div className='h-[100%] '>
       <div className='pt-1 lg:-mt-0'>
       <Navbar number={number}/>
       </div>
       <div className='h-[60%] lg:w-[80%] lg:mx-auto mt-2 lg:pt-8'>
-      <Outlet context={{number,calculate}}/>
+      <Outlet context={{number,array,calculate}}/>
       </div>
       <ServiceSection/>
       <Footer/>

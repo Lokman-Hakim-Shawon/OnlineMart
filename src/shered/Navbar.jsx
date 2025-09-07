@@ -39,7 +39,7 @@ const Navbar = ({number}) => {
       </div>
       <div className="navbar-end lg:pr-24 pr-6 mt-4 lg:mt-0">
         <span className=" px-2 py-1 text-xs -mr-2 bg-black mb-8 z-1  rounded-full absolute ">{number}</span>
-      <FaCartShopping className='z-2 text-3xl lg:text-4xl '/>
+      <Link to='/cart'><FaCartShopping className='z-2 text-3xl lg:text-4xl cursor-pointer'/></Link>
 
       </div>
     </div>

@@ -13,6 +13,8 @@ import Category from './pages/categoryPage/Category';
 import NewProduct from './pages/newProductPage/NewProduct';
 import FlashSell from './pages/flashSellPage/FlashSell';
 import PaymentPage from './pages/homePage/paymentPage/PaymentPage';
+import CartPage from './pages/CartPage/CartPage';
+import ProductDetailsPage from './pages/productDetailsPage/ProductDetailsPage';
 
 
 const router = createBrowserRouter([
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
       {
         path:'/payment/:id',
         element:<PaymentPage/>
+      },
+      {
+        path:'/cart',
+        element:<CartPage/>
+      },
+      {
+        path:'/product_detail/:id',
+        element:<ProductDetailsPage/>
       }
     ]
   },

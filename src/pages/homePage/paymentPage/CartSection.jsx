@@ -2,6 +2,9 @@ import React from 'react';
 
 const CartSection = ({cart}) => {
     console.log('data of cart',cart.id)
+    if(!cart){
+        return <p>loading ....</p>
+    }
     return (
         <div>
             <h1 className='text-3xl font-bold p-2 bg-primaryColor text-white text-center'>Cart Details</h1>
