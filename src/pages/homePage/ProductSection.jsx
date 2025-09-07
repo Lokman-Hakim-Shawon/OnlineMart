@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FaCartShopping } from 'react-icons/fa6';
 import { Link, useOutletContext } from 'react-router-dom';
 
 const ProductSection = () => {
@@ -30,10 +31,11 @@ const ProductSection = () => {
                 <div className="card-body w-full px-1 pt-0 h-36 lg:h-32">
                   <h2 className="card-title text-lg ">{data.product_name}</h2>
                   <p className='text-xm'>{data.title}</p>
-                  <div className="card-actions justify-center my-0">
+                  <div className="card-actions my-0 flex justify-around items-center">
                     <Link to={`/payment/${data.id}`}>
-                    <button onClick={calculate} className="btn bg-primaryColor text-white w-full mt-0">Order Now</button>
+                    <button  className="btn bg-primaryColor text-white w-full mt-0">Order Now</button>
                     </Link>
+                    <FaCartShopping onClick={calculate} className='text-3xl lg:text-4xl text-primaryColor cursor-pointer'/>
                   </div>
                 </div>
               </div>)
