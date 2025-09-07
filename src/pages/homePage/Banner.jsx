@@ -6,7 +6,7 @@ import img2 from '../../assets/banner/banner2.jpg'
 import img3 from '../../assets/banner/banner3.jpg'
 const Banner = () => {
     return (
-        <div className='h-64 lg:h-[30%] w-full border-2 pt-4 '>
+        <div className='h-64 lg:h-[30%] w-full border-2 pt-4 lg:pt-0'>
                <Carousel showArrows={true} infiniteLoop={true} autoPlay={true} interval={5000} showThumbs={false} dynamicHeight={true} className='h-64 lg:h-full'>
                 <div className='h-64 lg:h-full'>
                     <img src={img1} className='h-full w-full object-cover'/>

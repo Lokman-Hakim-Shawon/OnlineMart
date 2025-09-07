@@ -12,6 +12,7 @@ import Shop from './pages/ShopPage/Shop';
 import Category from './pages/categoryPage/Category';
 import NewProduct from './pages/newProductPage/NewProduct';
 import FlashSell from './pages/flashSellPage/FlashSell';
+import PaymentPage from './pages/homePage/paymentPage/PaymentPage';
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path:'/flash_sell',
         element:<FlashSell/>,
       },
+      {
+        path:'/payment/:id',
+        element:<PaymentPage/>
+      }
     ]
   },
 ]);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useOutletContext } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 const ProductSection = () => {
   const {calculate}=useOutletContext()
@@ -31,7 +31,9 @@ const ProductSection = () => {
                   <h2 className="card-title text-lg ">{data.product_name}</h2>
                   <p className='text-xm'>{data.title}</p>
                   <div className="card-actions justify-center my-0">
+                    <Link to={`/payment/${data.id}`}>
                     <button onClick={calculate} className="btn bg-primaryColor text-white w-full mt-0">Order Now</button>
+                    </Link>
                   </div>
                 </div>
               </div>)
