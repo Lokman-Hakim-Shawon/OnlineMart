@@ -10,7 +10,7 @@ const ProductSection = () => {
         .then(res=>res.json())
         .then(data=>{
             setDatas(data)
-            console.log(data)
+            console.log('productsection',data)
         })
         
     },[])

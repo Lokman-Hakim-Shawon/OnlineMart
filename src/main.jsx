@@ -15,6 +15,9 @@ import FlashSell from './pages/flashSellPage/FlashSell';
 import PaymentPage from './pages/homePage/paymentPage/PaymentPage';
 import CartPage from './pages/CartPage/CartPage';
 import ProductDetailsPage from './pages/productDetailsPage/ProductDetailsPage';
+import DashHomePage from './pages/dashboard/dashHomePage/DashHomePage';
+import DashMainPage from './pages/dashboard/dashMainPage/DashMainPage';
+import DashImportProduct from './pages/dashboard/dashImportProduct.jsx/DashImportProduct';
 
 
 const router = createBrowserRouter([
@@ -56,6 +59,20 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path:'Dashboard',
+    element:<DashMainPage/>,
+    children:[
+      {
+        path:'dashboard',
+        element:<DashHomePage/>
+      },
+      {
+        path:'dashboard/import_product',
+        element:<DashImportProduct/>
+      }
+    ]
+  }
 ]);
 
 
