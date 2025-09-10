@@ -12,7 +12,7 @@ const Navbar = ({number}) => {
   <Link onClick={handleLinkClick} to='/category' className='border-b-2 border-gray-100 lg:border-0'>categories</Link>
   <Link onClick={handleLinkClick} to='/new_product' className='border-b-2 border-gray-100 lg:border-0'>new products</Link>
   <Link onClick={handleLinkClick} to='/flash_sell' className='border-b-2 border-gray-100 lg:border-0'>flash sell</Link>
-  <Link onClick={handleLinkClick} to='dashboard' className='border-b-2 border-gray-100 lg:border-0'>Dashboard</Link>
+  <Link onClick={handleLinkClick} to='/dashboard' className='border-b-2 border-gray-100 lg:border-0'>Dashboard</Link>
   </>
     return (
       <div className="navbar bg-primaryColor shadow-sm text-white fixed z-10 -mt-1">

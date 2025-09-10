@@ -1,9 +1,20 @@
 import React from 'react';
 
 const DashImportProduct = () => {
+    const handleImportData=(e)=>{
+        e.preventDefault()
+        const formData = new FormData(e.target)
+        const files =formData.get('image')
+        const file=files.name
+        const product_name=formData.get('product_name')
+        const title=formData.get('title')
+        const description=formData.get('description')
+        const importData={file,product_name,title,description}
+        console.log(importData)
+    }
     return (
         <div className='pt-16 '>
-            <form className=" px-4 space-y-4 " action="" method="">
+            <form onSubmit={handleImportData} className=" px-4 space-y-4 " action="" method="">
                 <input
                     type="file"
                     id="image"
